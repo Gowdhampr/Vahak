@@ -11,7 +11,7 @@ const Label = styled.div`
 `;
 
 const Hr = styled.div`
-  border-bottom: 2px solid #3054D6;
+  border-bottom: 3px solid #3054D6;
   width: 70px;
   margin-left: auto;
   margin-right: auto;

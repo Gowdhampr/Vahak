@@ -1,8 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-const Card = ({children}) => {
+// Component - Custom hooks
+import useWindowDimensions from "../CustomHooks";
+
+const Card = ({children, maxWidth, showShadow}) => {
+    const { height, width } = useWindowDimensions();
+
+    const cardWidth = maxWidth > width ? maxWidth : (width/100) * 90;
+    const cardMargin = (height/100) * 5;
+
     return (
-        <div className="card">
+        <div className={`card ${showShadow ? "shadow" : ""}`}
+        style={{width: cardWidth, marginTop: cardMargin, marginBottom: cardMargin}}>
             <div className="cardBody">
                 {children}
             </div>

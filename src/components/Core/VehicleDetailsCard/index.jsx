@@ -7,7 +7,8 @@ import Truck from "../../../assets/svg/truck.svg";
 import Payment from "../../../assets/svg/payment.svg";
 import UserAvatar from "../../../assets/ProfileTop.png";
 
-import useWindowDimensions from "../CustomHooks"
+// Component - Custom hooks
+import useWindowDimensions from "../CustomHooks";
 
 const Title = styled.div`
     background-color: #202942;
@@ -33,19 +34,21 @@ const CardBody = styled.div`
 const CardFooter = styled.div`
 `;
 
-const Card = ({data}) => {
+const Card = ({data, showShadow}) => {
     const [toggleDetails, setToggleDetials] = useState(false);
 
     const toggle = () => setToggleDetials(!toggleDetails);
 
-    const { width } = useWindowDimensions();
+    const { height,  width } = useWindowDimensions();
 
     const cardWidth = (width/100) * 90;
+    const cardMargin = (height/100) * 5;
 
     const showDetails = !toggleDetails ? 'd-none' : '';
 
     return (
-        <div className="card" style={{width: cardWidth}}>
+        <div className={`card ${showShadow ? "shadow" : ""}`} 
+        style={{width: cardWidth, marginTop: cardMargin, marginBottom: cardMargin}}>
             <Title className="card-title">
                 {data.vehicleModel}
                 <SubTitle>Posted at {data.postedAt}</SubTitle>
