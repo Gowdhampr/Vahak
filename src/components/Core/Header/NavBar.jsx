@@ -7,12 +7,12 @@ const NavBar = () => {
             <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
                 <i class="fa fa-bars"></i>
             </label>
-            <Link class="logo">logo</Link>
+            <Link to="/" class="logo">logo</Link>
             <input type="checkbox" id="chkToggle"></input>
             <ul class="main-nav" id="js-menu">
-            <li>
-                <Link class="nav-links">Home</Link>
-            </li>
+                <li>
+                    <Link to="/" class="nav-links">Home</Link>
+                </li>
             </ul>
         </nav>
     )
