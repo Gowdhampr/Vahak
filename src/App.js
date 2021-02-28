@@ -22,7 +22,7 @@ function App() {
             <DefaultLayout
               exact
               name="Home"
-              path="/bid/:id"
+              path="/"
               component={Home}
             />
           </Switch>

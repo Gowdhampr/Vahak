@@ -1,15 +1,15 @@
 import React, { Suspense } from "react";
 import { Route, Switch } from "react-router-dom";
+import NavBar from "../../components/Core/Header/NavBar";
 
 // routes config
 import routes from "../../routes";
-
-import React from 'react'
 
 export default function DefaultLayout() {
   return (
     <div className="app">
       <div className="app-body">
+        <NavBar />
         <main className="container">
           <Suspense>
             <Switch>
