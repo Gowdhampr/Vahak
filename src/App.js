@@ -8,7 +8,7 @@ import "./App.scss";
 import DefaultLayout from "./containers/DefaultLayout";
 
 // Views
-import Home from "./views/home";
+import VehicleDetailsPage from "./views/VehicleDetailsPage";
 
 /*
    App Content
@@ -21,9 +21,9 @@ function App() {
           <Switch>
             <DefaultLayout
               exact
-              name="Home"
-              path="/"
-              component={Home}
+              name="Vehicle Details page"
+              path="/bid/:id"
+              component={VehicleDetailsPage}
             />
           </Switch>
         </Router>

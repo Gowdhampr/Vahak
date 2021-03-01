@@ -2,14 +2,13 @@ import React from 'react';
 
 // Assets
 import UserAvatar from "../../../assets/ProfileAvatarSmall.png";
-import HondaLogo from "../../../assets/HondaLogo.png";
+import HondaLogo from "../../../assets/hondaLogo.png";
+import Hamburger from "../../../assets/hamburger.png";
 
 const NavBar = () => {
     return (
         <nav class="navbar">
-            <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
-                <i class="fa fa-bars"></i>
-            </label>
+            <img className="logo" alt="" src={Hamburger} style={{height: "40px"}} />
             <img className="logo" alt="" src={HondaLogo} style={{height: "60px"}} />
             <img className="userAvatar" alt="" src={UserAvatar} style={{height: "40px"}} />
             <input type="checkbox" id="chkToggle"></input>

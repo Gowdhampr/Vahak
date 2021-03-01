@@ -9,7 +9,7 @@ import Form from '../../components/Core/Form';
 import InputField from '../../components/Core/InputTextField';
 import { ButtonFilled } from '../../components/Core/ButtonFilled';
 
-function Home() {
+function VehicleDetailsPage() {
     const vehicleDetails = {
         ownerDetails: {
             firstName: "Rohan",
@@ -95,4 +95,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default VehicleDetailsPage;

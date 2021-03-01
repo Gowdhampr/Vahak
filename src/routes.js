@@ -1,13 +1,13 @@
 // Home
-import Home from "./views/home";
+import VehicleDetailsPage from "./views/VehicleDetailsPage";
 
 // List of routes
 const routes = [
   {
-    path: "/",
+    path: "/bid/:id",
     exact: true,
-    name: "Home",
-    component: Home
+    name: "Vehicle Details Page",
+    component: VehicleDetailsPage
   }
 ];
 
