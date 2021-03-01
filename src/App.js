@@ -22,7 +22,7 @@ function App() {
             <DefaultLayout
               exact
               name="Vehicle Details page"
-              path="/bid/:id"
+              path="/"
               component={VehicleDetailsPage}
             />
           </Switch>
