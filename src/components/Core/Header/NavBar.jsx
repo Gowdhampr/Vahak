@@ -2,8 +2,8 @@ import React from 'react';
 
 // Assets
 import UserAvatar from "../../../assets/ProfileAvatarSmall.png";
-import HondaLogo from "../../../assets/hondaLogo.png";
 import Hamburger from "../../../assets/hamburger.png";
+import HondaLogo from "../../../assets/hondaLogo.png";
 
 const NavBar = () => {
     return (
