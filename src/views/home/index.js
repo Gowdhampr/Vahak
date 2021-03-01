@@ -5,7 +5,9 @@ import Card from '../../components/Core/Card'
 import LabelComponent from "../../components/Core/Label"
 import VehicleDetailsCard from "../../components/Core/VehicleDetailsCard"
 import CurrencyField from '../../components/Core/CurrencyInputField';
-import { ButtonOutlined } from '../../components/Core/ButtonOutlined';
+import Form from '../../components/Core/Form';
+import InputField from '../../components/Core/InputTextField';
+import { ButtonFilled } from '../../components/Core/ButtonFilled';
 
 function Home() {
     const vehicleDetails = {
@@ -39,9 +41,34 @@ function Home() {
                 <CurrencyField handlePriceChange={e => handlePriceChange(e)} />
                 {/* Price negotiate buttons */}
                 <div className="priceButtonContainer">
-                    <ButtonOutlined disabled={!priceAmount ? true : false} label="Fixed Price" />
-                    <ButtonOutlined disabled={!priceAmount ? true : false} label="Rate Negiotable" />
+                    <input 
+                        type="radio" 
+                        id="fixedPrice" 
+                        name="priceButton" 
+                        value="Fixed Price" 
+                        disabled={!priceAmount ? true : false} 
+                    />
+                    <label className="btnLabel" for="fixedPrice">Fixed Price</label>
+
+                    <input 
+                        type="radio" 
+                        id="negotiation" 
+                        name="priceButton" 
+                        value="Rate Negotiation"
+                        disabled={!priceAmount ? true : false}
+                    />
+                    <label className="btnLabel" for="negotiation">Rate Negotiation</label>
                 </div>
+                {/* Form */}
+                <Form>
+                    <InputField name="phone" type="text" label="Enter your mobile number*"
+                        required
+                        pattern="^\d{10}$"
+                        />
+                    <InputField name="name" label="Enter your name*" required />
+                    <InputField name="name" label="Enter Remarks (optional)" />
+                    <ButtonFilled label="Bid Now" />
+                </Form>
             </Card>
         </div>
     )
