@@ -3,7 +3,7 @@ import React from 'react';
 // Assets
 import UserAvatar from "../../../assets/ProfileAvatarSmall.png";
 import Hamburger from "../../../assets/hamburger.png";
-import HondaLogo from "../../../assets/hondaLogo.png";
+import HondaLogo from "../../../assets/HondaLogo.png";
 
 const NavBar = () => {
     return (
