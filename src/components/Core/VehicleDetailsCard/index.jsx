@@ -70,7 +70,7 @@ const Card = ({data, showShadow}) => {
             </CardBody>
             <CardFooter className="footer">
                 <div>
-                    <p className="text-center toggleBtn" onClick={toggle}>More Details <i class={`fa fa-chevron-${toggleDetails ? 'down' : 'up'}`}></i></p>
+                    <p className="text-center toggleBtn" onClick={toggle}>More Details <i class={`fa fa-chevron-${!toggleDetails ? 'down' : 'up'}`}></i></p>
                 </div>
                 <div className="footerContent">
                     <img className="userAvatar" alt="" src={UserAvatar} />

@@ -1,5 +1,8 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+
+// Assets
+import UserAvatar from "../../../assets/ProfileAvatarSmall.png";
+import HondaLogo from "../../../assets/HondaLogo.png";
 
 const NavBar = () => {
     return (
@@ -7,13 +10,9 @@ const NavBar = () => {
             <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
                 <i class="fa fa-bars"></i>
             </label>
-            <Link to="/" class="logo">logo</Link>
+            <img className="logo" alt="" src={HondaLogo} style={{height: "60px"}} />
+            <img className="userAvatar" alt="" src={UserAvatar} style={{height: "40px"}} />
             <input type="checkbox" id="chkToggle"></input>
-            <ul class="main-nav" id="js-menu">
-                <li>
-                    <Link to="/" class="nav-links">Home</Link>
-                </li>
-            </ul>
         </nav>
     )
 }
