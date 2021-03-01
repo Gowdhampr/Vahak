@@ -25,10 +25,22 @@ function Home() {
     }
 
     const [priceAmount, setPriceAmount] = useState(0);
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [name, setName] = useState('');
 
     const handlePriceChange = (e) => {
         setPriceAmount(e.target.value);
     }
+
+    const handlePhoneNumber = (e) => {
+        setPhoneNumber(e.target.value);
+    }
+
+    const handleName = (e) => {
+        setName(e.target.value);
+    }
+
+    const allowToBid = (phoneNumber.length && name.length) <= 0 ? true : false;
     return (
         <div>
             <LabelComponent className="text-center">Old Car Available</LabelComponent>
@@ -64,12 +76,21 @@ function Home() {
                     <InputField name="phone" type="text" label="Enter your mobile number*"
                         required
                         pattern="^\d{10}$"
-                        />
-                    <InputField name="name" label="Enter your name*" required />
-                    <InputField name="name" label="Enter Remarks (optional)" />
-                    <ButtonFilled label="Bid Now" />
+                        onChange={e => handlePhoneNumber(e)}
+                    />
+                    <InputField 
+                        name="name" 
+                        label="Enter your name*"
+                        required
+                        onChange={e => handleName(e)}
+                    />
+                    <InputField 
+                        name="name"
+                        label="Enter Remarks (optional)" 
+                    />
                 </Form>
             </Card>
+            <ButtonFilled label="Bid Now" disabled={allowToBid} />
         </div>
     )
 }

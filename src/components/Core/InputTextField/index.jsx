@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const InputTextField = ({className, name, id, label, type, required, pattern}) => {
+const InputTextField = ({className, name, id, label, type, required, pattern, onChange}) => {
     const InputId = id || name;
     const [focus, setFocus] = useState(false);
 
@@ -21,7 +21,7 @@ const InputTextField = ({className, name, id, label, type, required, pattern}) =
                     id={InputId}
                     type={type || "text"}
                     value={inputValue}
-                    onChange={e => handleChange(e)}
+                    onChange={e => {handleChange(e); onChange && onChange(e)}}
                     onFocus={() => setFocus(true)} 
                     onBlur={() => setFocus(false)}
                     required={required}
